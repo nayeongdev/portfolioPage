@@ -7,12 +7,13 @@
     <title>김나영의 포트폴리오</title>
     <link rel="icon" href="images/favicon/favicon.svg">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
       <div class="header-top">
         <h1 class="page-logo">
-          <a href="">
+          <a href="/">
             <span class="blind">김나영의 포트폴리오</span>
           </a>
         </h1>
@@ -30,33 +31,43 @@
             <span class="blind">메뉴닫기</span>
           </button>
         </nav>
-        
       </div>
     </header>
 
     <main>
-      <section id="home">
+      <section class="section" id="home">
         <h2 class="blind">home</h2>
         <div class="intro-cont">
           <p>안녕하세요.</p>
           <p><span>김나영</span>입니다.</p>
-        </div> 
+        </div>
       </section>
-      <section id="profil">
+      <section class="section" id="profil">
         <h2>profil</h2>
         <div class="about-me">
           <h3>about</h3>
           <div class="cont-wrap">
             <p>
-              저는 ~가 되기를 희망하고 있습니다. 어떤식으로 공부를 하고
-              성장하고 있는지 앞으로 어디까지 성장하고 싶은지 이런 것을 적을 예정
-              나의 다짐도 적어주자
+              저는 ~가 되기를 희망하고 있습니다. 어떤식으로 공부를 하고 성장하고
+              있는지 앞으로 어디까지 성장하고 싶은지 이런 것을 적을 예정 나의
+              다짐도 적어주자
             </p>
             <div class="about-meta-info">
               <img src="images/polarfox.jpg" alt="작성자 사진" />
-              <p><span class="blind">이름 :</span><strong>김나영</strong></p>
-              <p><span class="blind">이메일 :</span>nykim_99@naver.com</p>
-              <p><span class="blind">생년월일 :</span>1999년 11월 5일생</p>
+              <table>
+                <tr>
+                  <th scope="row"><span class="blind">이름</span></th>
+                  <td><strong>김나영</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="blind">이메일</span></th>
+                  <td>nykim_99@naver.com</td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="blind">생년월일</span></th>
+                  <td>1999년 11월 5일생</td>
+                </tr>
+              </table>
             </div>
             <p class="blind">교육</p>
             <ul>
@@ -90,7 +101,7 @@
                 <p class="skill-logo"><span class="blind">HTML</span></p>
                 <div class="bar">
                   <div class="gauge"></div>
-                </div> 
+                </div>
                 <p>90%</p>
               </li>
               <li>
@@ -111,12 +122,12 @@
           </div>
         </div>
       </section>
-      <section id="work">
+      <section class="section" id="work">
         <h2>work</h2>
         <div class="swiper">
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"> 
+            <div class="swiper-slide">
               <figure>
                 <img src="images/notion.jpg" alt="포트폴리오 사진" />
                 <figcaption>
@@ -140,7 +151,7 @@
           <div class="swiper-pagination"></div>
         </div>
       </section>
-      <section id="contact">
+      <section class="section" id="contact">
         <h2>contact</h2>
         <div class="social-wrap">
           <ul>
@@ -190,13 +201,19 @@
     </main>
     <footer>
       <ul>
-        <li><a href="">깃허브 바로가기</a></li>
-        <li><a href="">블로그 바로가기</a></li>
-        <li><a href="">PDF 이력서 다운받기</a></li>
+        <li>
+          <a href=""><span class="blind">깃허브 바로가기</span></a>
+        </li>
+        <li>
+          <a href=""><span class="blind">블로그 바로가기</span></a>
+        </li>
+        <li>
+          <a href=""><span class="blind">PDF 이력서 다운받기</span></a>
+        </li>
       </ul>
       <div class="page-desc">
         <p>이 페이지는 포트폴리오 목적으로 개설된 사이트입니다.</p>
-        <p>Copyright © 2023 Kim, Na-yeong all rights reserved.</p> 
+        <p>Copyright © 2023 Kim, Na-yeong all rights reserved.</p>
       </div>
     </footer>
   </body>
