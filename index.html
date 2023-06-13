@@ -147,7 +147,7 @@
                 <img src="images/notion.jpg" alt="포트폴리오 사진" />
                 <figcaption>
                   <strong>포트폴리오 제목</strong>
-                  UX/UI / Publising / javascript
+                  <p>UX/UI / Publising / javascript</p>
                 </figcaption>
                 <a href="">more</a>
               </figure>
@@ -157,7 +157,7 @@
                 <img src="images/notion.jpg" alt="포트폴리오 사진" />
                 <figcaption>
                   <strong>포트폴리오 제목</strong>
-                  UX/UI / Publising / javascript
+                  <p>UX/UI / Publising / javascript</p>
                 </figcaption>
                 <a href="">more</a>
               </figure>
@@ -171,46 +171,60 @@
         <div class="social-wrap contents">
           <ul class="cont">
             <li>
-              <a href="">
+              <a href="mailto:nayeongkim.dev@gmail.com">
                 <div class="social-logo"></div>
-                e-mail
+                <span class="blind">이메일로 연락하기</span>
               </a>
+              <p class="social-logo-title" aria-hidden="true">e-mail</p>
             </li>
             <li>
               <a href="">
                 <div class="social-logo"></div>
-                kakaotalk
+                <span class="blind">오픈채팅으로 연락하기</span>
               </a>
+              <p class="social-logo-title" aria-hidden="true">kakaotalk</p>
             </li>
             <li>
               <a href="">
                 <div class="social-logo"></div>
-                linkin
+                <span class="blind">링크인으로 연락하기</span>
               </a>
+              <p class="social-logo-title" aria-hidden="true">linkin</p>
             </li>
             <li>
               <a href="">
                 <div class="social-logo"></div>
-                instagram
+                <span class="blind">인스타 DM으로 연락하기</span>
               </a>
+              <p class="social-logo-title" aria-hidden="true">instagram</p>
             </li>
           </ul>
-          <form action="" class="contact-form cont" id="myForm">
-            <label for="name">name</label>
-            <input type="text" name="name" id="name" />
-            <label for="email">email</label>
-            <input type="email" name="email" id="email" />
-            <label for="tel">tel</label>
-            <input type="tel" name="tel" id="tel" />
-            <label for="message">message</label>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-            ></textarea>
+          <div action="" class="contact-form cont" id="myForm">
+            <p>
+              <label for="name">name</label>
+              <input type="text" name="name" id="name" placeholder="홍길동"/>
+            </p>
+            <p>
+              <label for="email">email</label>
+              <input type="email" name="email" id="email" placeholder="example@email.com"/>
+              <span id="error"></span>
+            </p>
+            <p>
+              <label for="tel">tel</label>
+              <input type="tel" name="tel" id="tel" placeholder="123-456-789"/>
+            </p>
+            <p>
+              <label for="message">message</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="메시지를 작성해주세요"
+              ></textarea>
+            </p>
             <button type="submit">send</button>
-          </form>
+          </div>
         </div>
       </section>
     </main>
