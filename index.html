@@ -26,12 +26,26 @@
         </button>
         <nav class="gnb">
           <ul>
-            <li><a href="#home" class="nav-item is-active" active-color="orange">home</a></li>
-            <li><a href="#profile" class="nav-item" active-color="orange">profile</a></li>
-            <li><a href="#work" class="nav-item" active-color="orange">work</a></li>
-            <li><a href="#contact" class="nav-item" active-color="orange">contact</a></li>
+            <li>
+              <a href="#home" class="nav-item is-active" active-color="orange"
+                >home</a
+              >
+            </li>
+            <li>
+              <a href="#profile" class="nav-item" active-color="orange"
+                >profile</a
+              >
+            </li>
+            <li>
+              <a href="#work" class="nav-item" active-color="orange">work</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-item" active-color="orange"
+                >contact</a
+              >
+            </li>
           </ul>
-          <span class="nav-indicator"></span>
+          <!-- <span class="nav-indicator"></span> -->
           <button class="btn-menu-close">
             <span class="blind">메뉴닫기</span>
           </button>
@@ -96,7 +110,7 @@
           <div class="skills cont">
             <h3>skills</h3>
             <p>HTML, CSS, SCSS, JS, Figma</p>
-            <br>
+            <br />
             <div class="cont-wrap">
               <ul>
                 <li>
@@ -151,31 +165,41 @@
       </section>
       <section class="section" id="work">
         <h2>work</h2>
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <figure>
-                <img src="images/notion.jpg" alt="포트폴리오 사진" />
-                <figcaption>
-                  <strong>포트폴리오 제목</strong>
-                  <p>UX/UI / Publising / javascript</p>
-                </figcaption>
-                <a href="">more</a>
-              </figure>
-            </div>
-            <div class="swiper-slide">
-              <figure>
-                <img src="images/notion.jpg" alt="포트폴리오 사진" />
-                <figcaption>
-                  <strong>포트폴리오 제목</strong>
-                  <p>UX/UI / Publising / javascript</p>
-                </figcaption>
-                <a href="">more</a>
-              </figure>
+        <div class="swiper-container">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <figure>
+                  <img src="images/notion.jpg" alt="포트폴리오 사진" />
+                  <figcaption>
+                    <div>
+                      <strong>포트폴리오 제목</strong>
+                      <p>UX/UI / Publising / javascript</p>
+                    </div>
+                    <a href="">더보기</a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img src="images/notion.jpg" alt="포트폴리오 사진" />
+                  <figcaption>
+                    <div>
+                      <strong>포트폴리오 제목</strong>
+                      <p>UX/UI / Publising / javascript</p>
+                    </div>
+                    <a href="">더보기</a>
+                  </figcaption>
+                </figure>
+              </div>
             </div>
           </div>
+          <!-- Add Pagination -->
           <div class="swiper-pagination"></div>
+          <!-- Add Navigation -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </section>
       <section class="section" id="contact">
