@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>김나영의 포트폴리오</title>
-    <link rel="icon" href="images/favicon/favicon.svg">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon/favicon.svg" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="header-top">
         <h1 class="page-logo">
           <a href="/">
@@ -22,15 +26,21 @@
         </button>
         <nav class="gnb">
           <ul>
-            <li><a href="#home">home</a></li>
-            <li><a href="#profile">profile</a></li>
-            <li><a href="#work">work</a></li>
-            <li><a href="#contact">contact</a></li>
+            <li><a href="#home" class="nav-item is-active" active-color="orange">home</a></li>
+            <li><a href="#profile" class="nav-item" active-color="orange">profile</a></li>
+            <li><a href="#work" class="nav-item" active-color="orange">work</a></li>
+            <li><a href="#contact" class="nav-item" active-color="orange">contact</a></li>
           </ul>
+          <span class="nav-indicator"></span>
           <button class="btn-menu-close">
             <span class="blind">메뉴닫기</span>
           </button>
         </nav>
+      </div>
+      <div class="header-bottom">
+        <div class="scroll-bar">
+          <div class="scroll-gauge"></div>
+        </div>
       </div>
     </header>
 
@@ -74,7 +84,7 @@
                 </div>
               </div>
               <h4 class="blind">교육</h4>
-              <ul id="educations">
+              <ul class="educations">
                 <li>원광대학교 컴퓨터소프트웨어공학과 전공</li>
                 <li>정보처리기사자격증, SQLD 자격증 보유</li>
                 <li>
@@ -85,50 +95,52 @@
           </div>
           <div class="skills cont">
             <h3>skills</h3>
+            <p>HTML, CSS, SCSS, JS, Figma</p>
+            <br>
             <div class="cont-wrap">
               <ul>
                 <li>
                   <div class="skill">
-                    <p class="skill-logo"><span class="blind">HTML</span></p>
+                    <img src="./images/icons/html.svg" alt="HTML" />
                   </div>
                   <div class="bar">
-                    <div class="gauge"></div>
+                    <div class="gauge" style="width: 90%"></div>
                   </div>
                   <p><span class="bold">90</span>%</p>
                 </li>
                 <li>
                   <div class="skill">
-                    <p class="skill-logo"><span class="blind">HTML</span></p>
+                    <img src="./images/icons/css.svg" alt="HTML" />
                   </div>
                   <div class="bar">
-                    <div class="gauge"></div>
+                    <div class="gauge" style="width: 80%"></div>
                   </div>
-                  <p><span class="bold">90</span>%</p>
+                  <p><span class="bold">80</span>%</p>
                 </li>
                 <li>
                   <div class="skill">
-                    <p class="skill-logo"><span class="blind">HTML</span></p>
+                    <img src="./images/icons/sass.svg" alt="HTML" />
                   </div>
                   <div class="bar">
-                    <div class="gauge"></div>
+                    <div class="gauge" style="width: 75%"></div>
                   </div>
-                  <p><span class="bold">90</span>%</p>
+                  <p><span class="bold">75</span>%</p>
                 </li>
                 <li>
                   <div class="skill">
-                    <p class="skill-logo"><span class="blind">HTML</span></p>
+                    <img src="./images/icons/js.svg" alt="HTML" />
                   </div>
                   <div class="bar">
-                    <div class="gauge"></div>
+                    <div class="gauge" style="width: 80%"></div>
                   </div>
-                  <p><span class="bold">90</span>%</p>
+                  <p><span class="bold">80</span>%</p>
                 </li>
                 <li>
                   <div class="skill">
-                    <p class="skill-logo"><span class="blind">HTML</span></p>
+                    <img src="./images/icons/figma.svg" alt="HTML" />
                   </div>
                   <div class="bar">
-                    <div class="gauge"></div>
+                    <div class="gauge" style="width: 90%"></div>
                   </div>
                   <p><span class="bold">90</span>%</p>
                 </li>
@@ -172,46 +184,65 @@
           <ul class="cont">
             <li>
               <a href="mailto:nayeongkim.dev@gmail.com">
-                <div class="social-logo"></div>
-                <span class="blind">이메일로 연락하기</span>
+                <div class="social-logo">
+                  <img src="./images/icons/mail.svg" alt="이메일로 연락하기" />
+                </div>
               </a>
               <p class="social-logo-title" aria-hidden="true">e-mail</p>
             </li>
             <li>
               <a href="">
-                <div class="social-logo"></div>
-                <span class="blind">오픈채팅으로 연락하기</span>
+                <div class="social-logo">
+                  <img
+                    src="./images/icons/kakaotalk.svg"
+                    alt="오픈채팅으로 연락하기"
+                  />
+                </div>
               </a>
               <p class="social-logo-title" aria-hidden="true">kakaotalk</p>
             </li>
             <li>
               <a href="">
-                <div class="social-logo"></div>
-                <span class="blind">링크인으로 연락하기</span>
+                <div class="social-logo">
+                  <img
+                    src="./images/icons/linkedIn.svg"
+                    alt="링크인으로 연락하기"
+                  />
+                </div>
               </a>
               <p class="social-logo-title" aria-hidden="true">linkin</p>
             </li>
             <li>
               <a href="">
-                <div class="social-logo"></div>
-                <span class="blind">인스타 DM으로 연락하기</span>
+                <div class="social-logo">
+                  <img
+                    src="./images/icons/instagram.svg"
+                    alt="인스타 DM 보내기"
+                  />
+                </div>
               </a>
               <p class="social-logo-title" aria-hidden="true">instagram</p>
             </li>
           </ul>
-          <div action="" class="contact-form cont" id="myForm">
+          <div class="division-line"></div>
+          <form action="" class="contact-form cont" id="myForm">
             <p>
               <label for="name">name</label>
-              <input type="text" name="name" id="name" placeholder="홍길동"/>
+              <input type="text" name="name" id="name" placeholder="홍길동" />
             </p>
             <p>
               <label for="email">email</label>
-              <input type="email" name="email" id="email" placeholder="example@email.com"/>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@email.com"
+              />
               <span id="error"></span>
             </p>
             <p>
               <label for="tel">tel</label>
-              <input type="tel" name="tel" id="tel" placeholder="123-456-789"/>
+              <input type="tel" name="tel" id="tel" placeholder="123-456-789" />
             </p>
             <p>
               <label for="message">message</label>
@@ -224,20 +255,26 @@
               ></textarea>
             </p>
             <button type="submit">send</button>
-          </div>
+          </form>
         </div>
       </section>
     </main>
     <footer>
       <ul>
         <li>
-          <a href=""><span class="blind">깃허브 바로가기</span></a>
+          <a href="">
+            <span class="blind">깃허브 바로가기</span>
+          </a>
         </li>
         <li>
-          <a href=""><span class="blind">블로그 바로가기</span></a>
+          <a href="">
+            <span class="blind">블로그 바로가기</span>
+          </a>
         </li>
         <li>
-          <a href=""><span class="blind">PDF 이력서 다운받기</span></a>
+          <a href="">
+            <span class="blind">PDF 이력서 다운받기</span>
+          </a>
         </li>
       </ul>
       <div class="page-desc">
@@ -246,6 +283,7 @@
       </div>
     </footer>
     <script src="./js/swiper-bundle.js"></script>
+    <script src="./js/common.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
