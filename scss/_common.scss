@@ -1,0 +1,23 @@
+// 모든 페이지에서 공통으로 사용할 css
+body.non-scroll{
+  overflow: hidden; 
+}
+
+.header.hide{
+  transform: translateY(calc(-100% + 6px));
+}
+
+.blind {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+#error { color: red }

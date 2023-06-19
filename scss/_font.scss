@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "SUITE Variable";
+  font-weight: 200 400 700 900;
+  src: local("SUITE Variable"),
+    url("../fonts/SUITE-Variable.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-family: "LINESeed";
+  src: url("../fonts/LINESeedKR-Rg.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "LINESeed";
+  src: url("../fonts/LINESeedKR-Bg.woff2") format("woff2");
+  font-weight: 700;
+}
+
+body {
+  font-family: "SUITE Variable", sans-serif;
+}

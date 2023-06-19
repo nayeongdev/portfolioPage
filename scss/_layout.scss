@@ -1,0 +1,37 @@
+$bp: 1024px;
+@mixin mobile {
+  @media (max-width: 720px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$bp - 1}) {
+    @content;
+  }
+}
+@mixin pc{
+  @media (min-width:$bp) {
+    @content;
+  }
+}
+
+.section {
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 96px 0;
+}
+
+.contents {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  .cont {
+    flex: 1 1 0;
+  }
+  @include tablet{
+    display: block;
+    padding: 48px 0;
+  }
+}
+
