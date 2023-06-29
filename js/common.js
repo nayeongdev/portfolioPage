@@ -1,31 +1,46 @@
 const $ = (selector) => document.querySelector(selector);
 const body = document.body;
 
-function hasScrolled() {
-  const scrollY = window.scrollY;
-  const scrollDown = scrollY > lastScrollY;
-  if (scrollDown) {
-    $(".header").classList.add("hide");
-  } else {
-    $(".header").classList.remove("hide");
-  }
-  lastScrollY = scrollY;
+const navItems = document.querySelectorAll(".nav-item");
+const sections = document.querySelectorAll(".section");
+
+function changeLinkState() {
+  let index = sections.length;
+
+  while (--index && window.scrollY + 50 < sections[index].offsetTop - 200) {}
+
+  navItems.forEach((link) => link.classList.remove("active"));
+  navItems[index].classList.add("active");
 }
 
-// 스크롤 감지
-let didScroll;
-let lastScrollY = 0;
+changeLinkState();
+window.addEventListener("scroll", changeLinkState);
 
-// 스크롤 이벤트
-window.onscroll = (e) => (didScroll = true);
+// function hasScrolled() {
+//   const scrollY = window.scrollY;
+//   const scrollDown = scrollY > lastScrollY;
+//   if (scrollDown) {
+//     $(".header").classList.add("hide");
+//   } else {
+//     $(".header").classList.remove("hide");
+//   }
+//   lastScrollY = scrollY;
+// }
 
-// 0.25초마다 스크롤 여부를 체크하여 스크롤 중이면 hasScrolled() 호출
-setInterval(() => {
-  if (didScroll) {
-    hasScrolled();
-    didScroll = false;
-  }
-}, 250);
+// // 스크롤 감지
+// let didScroll;
+// let lastScrollY = 0;
+
+// // 스크롤 이벤트
+// window.onscroll = (e) => (didScroll = true);
+
+// // 0.25초마다 스크롤 여부를 체크하여 스크롤 중이면 hasScrolled() 호출
+// setInterval(() => {
+//   if (didScroll) {
+//     hasScrolled();
+//     didScroll = false;
+//   }
+// }, 250);
 
 // 스크롤 상태바
 window.addEventListener("scroll", function () {
@@ -109,47 +124,3 @@ navs.forEach((nav) => {
 //   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 //   window.scrollTo(0, 0);
 // }
-
-// 네비게이터 밑줄 표기
-// const indicator = document.querySelector(".nav-indicator");
-// const items = document.querySelectorAll(".nav-item");
-
-// function handleIndicator(el) {
-//   items.forEach((item) => {
-//     item.classList.remove("is-active");
-//     item.removeAttribute("style");
-//   });
-
-//   indicator.style.width = `${el.offsetWidth}px`;
-//   indicator.style.left = `${el.offsetLeft}px`;
-//   console.log(indicator.style.width);
-//   console.log(indicator.style.left);
-//   indicator.style.backgroundColor = el.getAttribute("active-color");
-
-//   el.classList.add("is-active");
-//   el.style.color = el.getAttribute("active-color");
-// }
-
-// let test = null;
-
-// items.forEach((item, index) => {
-//   item.addEventListener("click", (e) => {
-//     test = e.target;
-//     handleIndicator(e.target);
-//   });
-//   item.classList.contains("is-active") && handleIndicator(item);
-// });
-
-// window.onresize = function () {
-//   if (test != null) {
-//     handleIndicator(test);
-//   }
-// };
-// window.onresize = function () {
-//   const width = window.innerWidth;
-//   const height = window.innerHeight;
-
-//   console.log(width);
-//   console.log(height);
-//   handleIndicator(e.target);
-// };

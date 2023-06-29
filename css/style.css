@@ -170,9 +170,6 @@ body.non-scroll {
   display: -ms-flexbox;
   display: flex;
   gap: 24px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .contents .cont {
   -webkit-box-flex: 1;
@@ -1068,15 +1065,14 @@ header .header-bottom .scroll-gauge {
   }
   header .gnb .nav-item {
     color: #83818c;
-    padding-bottom: 4px;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
     position: relative;
   }
   header .gnb .nav-item:before {
     content: "";
     position: absolute;
-    bottom: -6px;
+    bottom: -5px;
     left: 0;
     width: 100%;
     height: 4px;
@@ -1086,23 +1082,16 @@ header .header-bottom .scroll-gauge {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  header .gnb .nav-item .is-active {
-    background: green;
+  header .gnb .nav-item.active {
+    border-bottom: 4px solid #1e2235;
+    color: #1e2235;
   }
-  header .gnb .nav-item:not(.is-active):hover:before {
+  header .gnb .nav-item:not(.active):hover::before {
     opacity: 1;
-    bottom: 0;
+    bottom: -4px;
   }
-  header .gnb .nav-item:not(.is-active):hover {
+  header .gnb .nav-item:not(.active):hover {
     color: #333;
-  }
-  header .gnb .nav-indicator {
-    position: absolute;
-    left: 0;
-    height: 4px;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    border-radius: 4px;
   }
 }
 @media (max-width: 1023px) {
