@@ -135,10 +135,15 @@ body.non-scroll {
   overflow: hidden;
 }
 
-.header.hide {
-  -webkit-transform: translateY(calc(-100% + 6px));
-      -ms-transform: translateY(calc(-100% + 6px));
-          transform: translateY(calc(-100% + 6px));
+.header.semi-transparent {
+  background: rgba(255, 255, 255, 0.9);
+}
+.header.semi-transparent .header-top {
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header.semi-transparent .header-bottom {
+  display: block;
 }
 
 .blind {
@@ -1009,7 +1014,7 @@ header {
   z-index: 100;
 }
 header .header-top {
-  background: rgba(255, 255, 255, 0.9);
+  background: transparent;
   padding: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1021,8 +1026,6 @@ header .header-top {
       -ms-flex-align: center;
           align-items: center;
   color: #1e2235;
-  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 header .header-top .page-logo {
   width: 320px;
@@ -1032,6 +1035,9 @@ header .header-top .page-logo {
 header .header-top .page-logo a {
   display: block;
   height: 100%;
+}
+header .header-bottom {
+  display: none;
 }
 header .header-bottom .scroll-bar {
   position: relative;
