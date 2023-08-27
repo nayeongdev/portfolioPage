@@ -227,8 +227,13 @@ main {
 
   #home {
     display: flex;
+    justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap;
+    gap: 5rem;
+    .intro-img {
+      margin-top: 6rem;
+    }
     .intro-cont {
       p {
         font-size: 6rem;

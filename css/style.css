@@ -1070,8 +1070,13 @@ main h3 {
 }
 main #home {
   display: flex;
+  justify-content: center;
   align-items: flex-end;
   flex-wrap: wrap;
+  gap: 5rem;
+}
+main #home .intro-img {
+  margin-top: 6rem;
 }
 main #home .intro-cont p {
   font-size: 6rem;
