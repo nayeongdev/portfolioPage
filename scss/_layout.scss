@@ -9,17 +9,22 @@ $bp: 1024px;
     @content;
   }
 }
-@mixin pc{
-  @media (min-width:$bp) {
+@mixin pc {
+  @media (min-width: $bp) {
     @content;
   }
 }
 
+.wrap{
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 .section {
   width: 90%;
-  min-height: 100vh;
   margin: 0 auto;
-  padding: 96px 0;
+  padding: 6rem 0;
 }
 
 .contents {
@@ -28,9 +33,8 @@ $bp: 1024px;
   .cont {
     flex: 1 1 0;
   }
-  @include tablet{
+  @include tablet {
     display: block;
     padding: 48px 0;
   }
 }
-

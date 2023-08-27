@@ -1,9 +1,19 @@
 @use "layout";
+body{
+  @include layout.pc {
+    background-color: #f7f7f7;
+  }
+}
+.wrap{
+  @include layout.pc {
+    background-color: #fff;
+  }
+}
 header {
   width: 100%;
+  max-width: 1920px;
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 100;
   .header-top {
     // background: rgba(255, 255, 255, 0.9);
@@ -13,12 +23,12 @@ header {
     justify-content: space-between;
     align-items: center;
     color: #1e2235;
-    // box-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.1);
-    // outline: 3px solid red;
+    // box-shadow: 0.125rem 0.125rem 0.25rem rgba($color: #000000, $alpha: 0.1);
+    // outline: 0.1875rem solid red;
     .page-logo {
       width: 320px;
-      height: 50px;
-      // outline: 3px solid red;
+      height: 48px;
+      // outline: 0.1875rem solid red;
       background: url(../images/icons/kimnnayeongLogo.svg) no-repeat center /
         contain;
       a {
@@ -33,7 +43,7 @@ header {
       position: relative;
       left: 0;
       top: 0;
-      height: 6px;
+      height: 0.375rem;
       width: 100%;
       background: rgba(238, 238, 238, 0.2);
     }
@@ -53,12 +63,13 @@ header {
       display: none;
     }
     .gnb {
-      // outline: 3px solid blue;
+      ul{
+        display: flex;
+        gap: 32px;
+        text-align: center;
+      }
       li {
-        // outline: 3px solid blue;
-        display: inline-block;
-        margin-left: 32px;
-        font-size: 24px;
+        font-size: 25.6px;
         font-weight: bold;
       }
       a {
@@ -72,18 +83,18 @@ header {
         &:before {
           content: "";
           position: absolute;
-          bottom: -5px;
+          bottom: -4.8px;
           left: 0;
           width: 100%;
-          height: 4px;
+          height: 0.25rem;
           background-color: #dfe2ea;
-          border-radius: 2px;
+          border-radius: 0.125rem;
           opacity: 0;
           transition: 0.3s;
         }
 
         &.active {
-          border-bottom: 4px solid #1e2235;
+          border-bottom: 0.25rem solid #1e2235;
           color: #1e2235;
         }
 
@@ -113,13 +124,13 @@ header {
           top: 8%;
           transform: translateX(-50%);
           width: 100%;
-          border-top: 4px solid #1e2235;
+          border-top: 0.25rem solid #1e2235;
         }
         &::after {
           top: auto;
           bottom: 8%;
-          height: 1.2rem;
-          border-bottom: 4px solid #1e2235;
+          height: 19.2px;
+          border-bottom: 0.25rem solid #1e2235;
         }
       }
       .gnb {
@@ -144,14 +155,14 @@ header {
         }
         ul {
           display: grid;
-          gap: 3rem;
+          gap: 48px;
           text-align: center;
         }
         a {
-          font-size: 44px;
+          font-size: 2.75rem;
           font-weight: 900;
-          text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
-            1px 1px 0 #fff;
+          text-shadow: -0.0625rem -0.0625rem 0 #fff, 0.0625rem -0.0625rem 0 #fff, -0.0625rem 0.0625rem 0 #fff,
+            0.0625rem 0.0625rem 0 #fff;
           &.active,
           &:active,
           &:hover {
@@ -162,10 +173,10 @@ header {
       }
       .btn-menu-close {
         position: fixed;
-        right: 15px;
-        top: 15px;
-        width: 44px;
-        height: 44px;
+        right: 0.9375rem;
+        top: 0.9375rem;
+        width: 2.75rem;
+        height: 2.75rem;
 
         &::before,
         &::after {
@@ -174,8 +185,8 @@ header {
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%) rotate(45deg);
-          width: 44px;
-          height: 3px;
+          width: 2.75rem;
+          height: 0.1875rem;
           background: #fff;
         }
         &::after {
@@ -195,7 +206,7 @@ header {
     .header-top {
       .page-logo {
         background-image: url(../images/icons/nyLogo.svg);
-        width: 50px;
+        width: 3.125rem;
       }
     }
   }
@@ -203,15 +214,15 @@ header {
 
 main {
   h2 {
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 900;
     text-transform: uppercase;
   }
   h3 {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 800;
     text-transform: capitalize;
-    padding: 32px 0;
+    padding: 2rem 0;
   }
 
   #home {
@@ -220,7 +231,7 @@ main {
     flex-wrap: wrap;
     .intro-cont {
       p {
-        font-size: 128px;
+        font-size: 6rem;
       }
     }
   }
@@ -229,50 +240,50 @@ main {
       .cont-wrap {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 1.5rem;
         p {
-          font-size: 18px;
-          padding-bottom: 24px;
+          font-size: 1.125rem;
+          padding-bottom: 1.5rem;
         }
       }
       .about-meta-info {
         display: flex;
-        gap: 20px;
+        gap: 1.25rem;
         align-items: center;
         flex-wrap: wrap;
         img {
-          width: 100px;
-          height: 100px;
+          width: 6.25rem;
+          height: 6.25rem;
           border-radius: 50%;
         }
         .info-txt {
           display: flex;
           flex-direction: column;
-          gap: 8px;
+          gap: 0.5rem;
         }
       }
       .educations {
         li {
-          margin-bottom: 4px;
+          margin-bottom: 0.25rem;
         }
       }
     }
     .skills {
       li {
-        margin-bottom: 24px;
+        margin-bottom: 1.5rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
       .skill {
-        width: 60px;
-        height: 60px;
-        border-radius: 16px;
+        width: 3.75rem;
+        height: 3.75rem;
+        border-radius: 1rem;
         background-color: #1e2235;
       }
       .bar {
         width: 80%;
-        height: 16px;
+        height: 1rem;
         background: #eee;
         .gauge {
           width: 90%;
@@ -287,47 +298,47 @@ main {
       position: relative;
       width: 90%;
       margin: 0 auto;
-      padding: 48px 0;
+      padding: 3rem 0;
       .swiper-button-prev {
-        left: -48px;
+        left: -3rem;
       }
       .swiper-button-next {
-        right: -48px;
+        right: -3rem;
       }
       .swiper-pagination {
-        bottom: -16px;
+        bottom: -1rem;
       }
     }
     .swiper {
       width: 100%;
-      box-shadow: 1px 1px 4px rgba(208, 208, 208);
+      box-shadow: 0.0625rem 0.0625rem 0.25rem rgba(208, 208, 208);
     }
     .swiper-wrapper {
-      padding-bottom: 16px;
+      padding-bottom: 1rem;
     }
     .swiper-slide {
       text-align: center;
     }
     figcaption {
-      margin: 0 56px;
-      padding: 32px 0;
+      margin: 0 3.5rem;
+      padding: 2rem 0;
       display: flex;
       flex-direction: column;
-      gap: 36px;
+      gap: 2.25rem;
       strong {
-        font-size: 40px;
+        font-size: 2.5rem;
       }
       p {
-        font-size: 18px;
+        font-size: 1.125rem;
       }
       a {
         text-align: center;
-        font-size: 36px;
+        font-size: 2.25rem;
         text-transform: capitalize;
         color: #ccc;
         background: #000;
-        padding: 8px 0;
-        border-radius: 8px;
+        padding: 0.5rem 0;
+        border-radius: 0.5rem;
       }
     }
   }
@@ -337,8 +348,8 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
-        row-gap: 24px;
-        column-gap: 48px;
+        row-gap: 1.5rem;
+        column-gap: 3rem;
         li {
           &:nth-of-type(1),
           &:nth-of-type(2) {
@@ -354,8 +365,8 @@ main {
           a {
             display: block;
             background: transparent;
-            width: 112px;
-            height: 112px;
+            width: 7rem;
+            height: 7rem;
             border-radius: 50%;
           }
 
@@ -374,7 +385,7 @@ main {
                     hue-rotate(68deg)
                     brightness(104%)
                     contrast(100%)
-                    drop-shadow(1px 1px 2px lightgray);
+                    drop-shadow(0.0625rem 0.0625rem 0.125rem lightgray);
                 }
               }
             }
@@ -382,8 +393,8 @@ main {
         }
         .social-logo {
           margin: 0 auto;
-          width: 64px;
-          height: 64px;
+          width: 4rem;
+          height: 4rem;
           position: relative;
           top: 50%;
           transform: translateY(-50%);
@@ -391,42 +402,42 @@ main {
           align-items: center;
         }
         .social-logo-title {
-          margin-top: 12px;
+          margin-top: 0.75rem;
           text-align: center;
         }
       }
       .division-line {
-        margin-right: 64px;
-        border-left: 1px solid #000;
+        margin-right: 4rem;
+        border-left: 0.0625rem solid #000;
         width: 0;
-        height: 24rem;
+        height: 384px;
         text-align: center;
         text-transform: uppercase;
-        font-size: 32px;
+        font-size: 2rem;
         font-weight: 200;
         &::after {
           content: "or";
           position: relative;
-          top: calc(50% - 32px);
-          left: -43px;
-          padding: 1rem;
+          top: calc(50% - 2rem);
+          left: -2.6875rem;
+          padding: 16px;
           background: #fff;
         }
       }
       .contact-form {
         p {
-          margin-bottom: 16px;
+          margin-bottom: 1rem;
         }
         label {
-          padding-bottom: 100px;
+          padding-bottom: 6.25rem;
         }
         input,
         textarea {
           display: block;
-          margin-top: 4px;
-          padding: 8px 2px;
+          margin-top: 0.25rem;
+          padding: 0.5rem 0.125rem;
           width: 100%;
-          border-bottom: 2px solid #000;
+          border-bottom: 0.125rem solid #000;
           &:hover,
           &:focus {
             background: rgba(238, 238, 238, 0.5);
@@ -439,7 +450,7 @@ main {
         button {
           background: #000;
           color: #fff;
-          padding: 8px 12px;
+          padding: 0.5rem 0.75rem;
           float: right;
           cursor: pointer;
         }
@@ -476,19 +487,19 @@ main {
     #home {
       .intro-cont {
         p {
-          font-size: 96px;
+          font-size: 6rem;
         }
       }
     }
     #contact {
       .social-wrap {
         .division-line {
-          margin: 56px auto;
-          border-top: 1px solid #000;
+          margin: 3.5rem auto;
+          border-top: 0.0625rem solid #000;
           width: 60%;
           height: 0;
           &::after {
-            top: -20px;
+            top: -1.25rem;
             left: 0;
           }
         }
@@ -499,19 +510,19 @@ main {
     #home {
       .intro-cont {
         p {
-          font-size: 72px;
+          font-size: 4.5rem;
         }
       }
     }
     #profile {
       .skills {
         .skill {
-          width: 44px;
-          height: 44px;
+          width: 2.75rem;
+          height: 2.75rem;
         }
         .bar {
           width: 70%;
-          height: 16px;
+          height: 1rem;
           background: #eee;
           .gauge {
             width: 90%;
@@ -530,23 +541,23 @@ main {
         }
       }
       figcaption {
-        margin: 0 32px;
-        padding: 16px 0;
-        gap: 16px;
+        margin: 0 2rem;
+        padding: 1rem 0;
+        gap: 1rem;
         strong {
-          font-size: 24px;
+          font-size: 1.5rem;
         }
         p {
-          font-size: 16px;
+          font-size: 1rem;
         }
         a {
           text-align: center;
-          font-size: 24px;
+          font-size: 1.5rem;
           text-transform: capitalize;
           color: #ccc;
           background: #000;
-          padding: 4px 0;
-          border-radius: 8px;
+          padding: 0.25rem 0;
+          border-radius: 0.5rem;
         }
       }
     }
@@ -558,15 +569,15 @@ footer {
   color: #cccccccc;
   display: flex;
   justify-content: space-around;
-  padding: 32px;
+  padding: 2rem;
   ul {
     display: flex;
-    gap: 24px;
+    gap: 1.5rem;
   }
   li {
     display: block;
-    width: 44px;
-    height: 44px;
+    width: 2.75rem;
+    height: 2.75rem;
   }
 
   $images: "github", "blog", "docs";
@@ -581,7 +592,7 @@ footer {
     display: block;
     text-align: center;
     ul {
-      padding-bottom: 32px;
+      padding-bottom: 2rem;
       justify-content: center;
     }
   }
